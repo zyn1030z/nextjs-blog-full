@@ -1,36 +1,159 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HungPham.dev - Personal Blog
 
-## Getting Started
+A modern personal blog built with Next.js, TypeScript, and Tailwind CSS. Features a beautiful design with animations and responsive layout.
 
-First, run the development server:
+## 🚀 Features
+
+- **Modern Design**: Beautiful UI with glass morphism effects
+- **Responsive**: Works perfectly on all devices
+- **Animations**: Smooth animations and hover effects
+- **Blog Ready**: Structured for blog content about programming and technology
+- **Tech Stack**: Next.js, TypeScript, Tailwind CSS, Golang content
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js 15, React 19, TypeScript
+- **Styling**: Tailwind CSS 4
+- **Deployment**: Vercel (recommended) or GitHub Pages
+- **Content**: Programming, Golang, Full-stack development
+
+## 📦 Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/yourusername/nextjs_frontend.git
+
+# Navigate to the project directory
+cd nextjs_frontend
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Method 1: Vercel (Recommended)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Connect to Vercel**:
 
-## Learn More
+   - Go to [vercel.com](https://vercel.com)
+   - Import your GitHub repository
+   - Vercel will automatically detect Next.js
 
-To learn more about Next.js, take a look at the following resources:
+2. **Automatic Deployment**:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   - Every push to `main` branch will trigger deployment
+   - Vercel handles all build configuration automatically
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Custom Domain**:
+   - Add your custom domain in Vercel dashboard
+   - Configure DNS settings
 
-## Deploy on Vercel
+### Method 2: GitHub Pages
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Switch to GitHub Pages config**:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   # Rename config files
+   mv next.config.ts next.config.vercel.ts
+   mv next.config.github-pages.ts next.config.ts
+   ```
+
+2. **Build and Deploy**:
+
+   ```bash
+   npm run build
+   # Upload contents of 'out' directory to GitHub Pages
+   ```
+
+3. **Enable GitHub Pages**:
+   - Go to repository Settings > Pages
+   - Select "Deploy from a branch"
+   - Choose `gh-pages` branch
+
+## 📁 Project Structure
+
+```
+nextjs_frontend/
+├── src/
+│   ├── app/
+│   │   └── page.tsx          # Home page
+│   └── ...
+├── public/
+│   └── background.jpg         # Background image
+├── .github/
+│   └── workflows/
+│       └── deploy.yml         # GitHub Actions workflow
+├── next.config.ts             # Next.js configuration (Vercel)
+├── next.config.github-pages.ts # Config for GitHub Pages
+├── vercel.json                # Vercel configuration
+├── tailwind.config.js         # Tailwind CSS configuration
+└── package.json
+```
+
+## 🎨 Customization
+
+### Colors and Themes
+
+- Edit `tailwind.config.js` to change color schemes
+- Modify animations in the config file
+
+### Content
+
+- Update content in `src/app/page.tsx`
+- Add new pages in `src/app/` directory
+- Replace `public/background.jpg` with your own image
+
+### Styling
+
+- All styles use Tailwind CSS classes
+- Custom animations defined in `tailwind.config.js`
+
+## 🔧 Development
+
+```bash
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Lint code
+npm run lint
+```
+
+## 🚀 Quick Deploy
+
+### Vercel (One-click)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/nextjs_frontend)
+
+### Manual Steps
+
+1. Fork this repository
+2. Connect to Vercel
+3. Deploy automatically
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📞 Contact
+
+- **Website**: [HungPham.dev](https://yourusername.vercel.app)
+- **GitHub**: [@yourusername](https://github.com/yourusername)
+
+---
+
+Built with ❤️ using Next.js and Tailwind CSS
